@@ -1,0 +1,39 @@
+# Incident Report: ICMP Flood DDoS Attack Mitigation
+
+## Executive Summary
+On [Date], the organization experienced a significant network disruption where all internal and external network services became unresponsive. Investigation revealed a **Distributed Denial of Service (DDoS)** attack utilizing an **ICMP Flood**. This report details the identification, response, and recovery steps taken by the cybersecurity team to restore critical services and harden the network against future attacks.
+
+---
+
+## 🔍 1. Identify
+* **Attack Type:** ICMP Flood (DDoS).
+* **Impact:** Total disruption of the internal network; all network services were unresponsive.
+* **Scope:** Entire enterprise network infrastructure.
+* **Goal:** Secure critical network resources and return to a functional state.
+
+## 🛡️ 2. Protect
+To mitigate the immediate threat and prevent recurrence, the following controls were implemented:
+* **Rate Limiting:** Configured new firewall rules to limit the volume of incoming ICMP packets.
+* **Filtering:** Deployed an **IDS/IPS (Intrusion Detection/Prevention System)** to drop ICMP traffic exhibiting malicious signatures or suspicious characteristics.
+
+## 📡 3. Detect
+Enhanced monitoring was established to identify "spoofed" traffic:
+* **Source IP Verification:** Enabled firewall features to validate the authenticity of incoming ICMP packet headers.
+* **Traffic Baselining:** Implemented network monitoring software to alert on abnormal traffic spikes that deviate from established historical patterns.
+
+## ⚔️ 4. Respond
+In alignment with the Incident Response Plan, the team executed the following:
+1.  **Isolation:** Affected systems were segmented to prevent further lateral disruption.
+2.  **Service Prioritization:** Non-critical services were suspended to prioritize bandwidth for mission-critical systems.
+3.  **Forensic Analysis:** Network logs were preserved and analyzed to identify the attack vectors and origin patterns.
+4.  **Reporting:** Documentation was submitted to upper management and legal authorities for compliance.
+
+## 🔄 5. Recover
+* **Restoration:** Access to network services was restored in a phased approach.
+* **Sequence:** Critical services were brought online first, followed by non-critical systems once ICMP flood timers expired.
+* **Hardening:** Future external ICMP floods are now configured to be dropped at the network edge (Firewall/Gateway).
+
+---
+
+## 📓 Reflections & Notes
+This incident highlighted the necessity of a layered defense strategy. While the firewall is the first line of defense, having a pre-configured **IDS/IPS** and a **phased recovery plan** ensured that critical business operations could resume even while the attack was being mitigated. This incident directly correlates with my experience in **Banking Fraud Operations**, where rapid response and "prioritization of assets" are key to minimizing loss.
