@@ -51,6 +51,7 @@
 **Scenario:** Investigating potential Brute Force attacks through centralized logging.  
 **Action:** Analyzed raw security logs in Google Chronicle to correlate failed login events and identify malicious IP patterns.  
 * **Key Skills:** SIEM, Log Correlation, Threat Hunting.
+* [**View Full Project →**](./siem-log-analysis/README.md)
 
 ---
 
